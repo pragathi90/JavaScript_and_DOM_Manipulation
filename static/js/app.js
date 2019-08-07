@@ -42,16 +42,10 @@ ufosighting.forEach((ufodata) => {
      });
 
 
-   //console.log(inputUser);
-    //console.log("Button Click Event");
-    //console.log("inputValue :",inputUser);
-    
-   
-
     filteredData = filteredData.filter(row => {
-      return Object.entries(inputUser).every(criteria => {
-        const key = criteria[0]
-        const value = criteria[1]
+      return Object.entries(inputUser).every(data => {
+        const key = data[0]
+        const value = data[1]
         return row[key] === value
       })
     })
