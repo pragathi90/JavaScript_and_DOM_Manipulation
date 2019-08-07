@@ -16,6 +16,8 @@ body {
   min-height: 100%;
   padding-bottom: 130px;
   overflow: auto;
+  background: #14215e;
+  
 }
 
 /* The footer is positioned at the bottom of the page */
@@ -25,7 +27,7 @@ body {
   bottom: 0;
   left: 0;
   min-height: 100px;
-  background: #4e5d6c;
+  background: #080d52;
 }
 
 /* The code styles the text at the bottom of the footer */
@@ -69,7 +71,7 @@ select {
   display: block;
   width: 100%;
   padding: 8px;
-  color: #8e979f;
+  color: #187df0;
   outline: none;
 }
 
@@ -120,22 +122,22 @@ select {
 /* input placeholder color changes */
 .form-control::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
-  color: #8e979f;
+  color: #056dc9;
 }
 
 .form-control::-moz-placeholder {
   /* Firefox 19+ */
-  color: #8e979f;
+  color: #1975c5;
 }
 
 .form-control:-ms-input-placeholder {
   /* IE 10+ */
-  color: #8e979f;
+  color: #1784e4;
 }
 
 .form-control:-moz-placeholder {
   /* Firefox 18- */
-  color: #8e979f;
+  color: #0f5a64;
 }
 
 /* media queries which will only be activated at specific screen sizes */
@@ -166,7 +168,7 @@ select {
     height: 1px;
     margin-top: 20px;
     content: " ";
-    background: aliceblue;
+    background: rgb(27, 142, 196);
   }
 
   #table-area td {
