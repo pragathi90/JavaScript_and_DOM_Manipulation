@@ -19,36 +19,13 @@ ufosighting.forEach((ufodata) => {
   filterbtn.on("click",function(){
 
     var filteredData = ufosighting;
-
     var inputDate= d3.select("#datetime").property("value");
-    var inputCity= d3.select("#City").property("value").toLowerCase().trim();
-    var inputState= d3.select("#State").property("value").toLowerCase().trim();
-    var inputCountry= d3.select("#Country").property("value").toLowerCase().trim();
-    var inputShape= d3.select("#Shape").property("value").toLowerCase().trim();
+   
+
+    if(inputDate) {
+      filteredData = filteredData.filter(row => row.datetime === inputDate);
+    }
     
-
-    var inputUser={ datetime:inputDate,
-                    city:inputCity,
-                    state:inputState,
-                    country:inputCountry,
-                    shape:inputShape
-                    }
-    
-
-    Object.entries(inputUser).forEach(([key, value]) => {
-      if(value===""){
-        delete  inputUser[key];
-      }   
-     });
-
-
-    filteredData = filteredData.filter(row => {
-      return Object.entries(inputUser).every(data => {
-        const key = data[0]
-        const value = data[1]
-        return row[key] === value
-      })
-    })
     
     var tableContent=d3.select("tbody");
 
